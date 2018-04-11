@@ -36,7 +36,8 @@
   # checkout
   co = checkout                     # checkout
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
-
+  fa = fetch --all
+  
   # cherry-pick
   cp = cherry-pick -x               # grab a change from a branch
 
@@ -128,5 +129,5 @@
 [github]
   user = MattJDavidson
 [user]
-	name = Matt Davidson
-	email = matthewdavidson12@gmail.com
+  name = Matt Davidson
+  email = matthjdavidson@protonmail.com
