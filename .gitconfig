@@ -49,6 +49,7 @@
   # merge
   ff = merge --ff-only
   noff = merge --no-ff
+  ffom = merge --ff-only origin/master
 
   # log
   l = log --graph --date=short
