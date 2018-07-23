@@ -45,6 +45,10 @@
   d = diff                          # diff unstaged changes
   dc = diff --cached                # diff staged changes
   last = diff HEAD^                 # diff last committed change
+  
+  # merge
+  ff = merge --ff-only
+  noff = merge --no-ff
 
   # log
   l = log --graph --date=short
