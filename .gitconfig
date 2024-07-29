@@ -50,6 +50,10 @@
   ff = merge --ff-only
   noff = merge --no-ff
   ffom = merge --ff-only origin/master
+  faf = "!f() { \
+        branch=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'); \
+        git checkout $branch && git fetch --all && git merge --ff-only origin/$branch; \
+    }; f"
 
   # log
   l = log --graph --date=short
