@@ -54,6 +54,13 @@
         branch=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'); \
         git checkout $branch && git fetch --all && git merge --ff-only origin/$branch; \
     }; f"
+  ns = "!f() { \
+        git stash && \
+        branch=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'); \
+        git checkout $branch && git fetch --all && git merge --ff-only origin/$branch && \
+        git nb $1 && \
+        git stash apply; \
+    }; f"
 
   # log
   l = log --graph --date=short
