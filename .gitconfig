@@ -56,8 +56,7 @@
     }; f"
   ns = "!f() { \
         git stash && \
-        branch=$(git symbolic-ref --short refs/remotes/origin/HEAD | sed 's@^origin/@@'); \
-        git checkout $branch && git fetch --all && git merge --ff-only origin/$branch && \
+        git faf && \
         git nb $1 && \
         git stash apply; \
     }; f"
